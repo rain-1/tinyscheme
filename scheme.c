@@ -1975,6 +1975,9 @@ static void atom2str(scheme *sc, pointer l, int f, char **pp, int *plen) {
           if (!f) {
                p[0]=c;
                p[1]=0;
+               *pp=p;
+               *plen=1;
+               return;
           } else {
                switch(c) {
                case ' ':

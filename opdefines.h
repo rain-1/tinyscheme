@@ -2,7 +2,7 @@
     _OP_DEF(opexe_0, 0,                                0,  0,       0,                               OP_T0LVL            )
     _OP_DEF(opexe_0, 0,                                0,  0,       0,                               OP_T1LVL            )
     _OP_DEF(opexe_0, 0,                                0,  0,       0,                               OP_READ_INTERNAL    )
-    _OP_DEF(opexe_0, "gensym",                         0,  0,       0,                               OP_GENSYM           )
+    _OP_DEF(opexe_0, "gensym",                         0,  1,       0,                               OP_GENSYM           )
     _OP_DEF(opexe_0, 0,                                0,  0,       0,                               OP_VALUEPRINT       )
     _OP_DEF(opexe_0, 0,                                0,  0,       0,                               OP_EVAL             )
 #if USE_TRACING

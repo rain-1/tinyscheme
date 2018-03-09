@@ -3714,7 +3714,10 @@ static pointer opexe_3(scheme *sc, enum scheme_opcodes op) {
      case OP_VECTORP:     /* vector? */
           s_retbool(is_vector(car(sc->args)));
      case OP_EQ:         /* eq? */
-          s_retbool(car(sc->args) == cadr(sc->args));
+          if (is_character(car(sc->args)) && is_character(cadr(sc->args)))
+            s_retbool(charvalue(car(sc->args)) == charvalue(cadr(sc->args)));
+          else
+            s_retbool(car(sc->args) == cadr(sc->args));
      case OP_EQV:        /* eqv? */
           s_retbool(eqv(car(sc->args), cadr(sc->args)));
      default:
